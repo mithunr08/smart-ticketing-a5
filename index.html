@@ -253,52 +253,21 @@
                 <div class="flex gap-32">
                   <div class="grid grid-cols-3 gap-3 *:px-10 *:py-5">
                     <p>A</p>
-                    <button class="btn add-btn">A1</button>
-                    <button class="btn add-btn">A2</button>
+                    <button class="btn add-button">
+                      <h6>A1</h6>
+                    </button>
+                    <button class="btn add-button"><h6>A2</h6></button>
                     <p>B</p>
-                    <button class="btn add-btn">B1</button>
-                    <button class="btn add-btn">B2</button>
-                    <p>C</p>
-                    <button class="btn add-btn">C1</button>
-                    <button class="btn add-btn">C2</button>
-                    <p>D</p>
-                    <button class="btn add-btn">D1</button>
-                    <button class="btn add-btn">D2</button>
-                    <p>E</p>
-                    <button class="btn add-btn">E1</button>
-                    <button class="btn add-btn">E2</button>
-                    <p>F</p>
-                    <button class="btn add-btn">F1</button>
-                    <button class="btn add-btn">F2</button>
-                    <p>G</p>
-                    <button class="btn add-btn">G1</button>
-                    <button class="btn add-btn">G2</button>
-                    <p>H</p>
-                    <button class="btn add-btn">H1</button>
-                    <button class="btn add-btn">H2</button>
-                    <p>I</p>
-                    <button class="btn add-btn">I1</button>
-                    <button class="btn add-btn">I2</button>
+                    <button class="btn add-button"><h6>B1</h6></button>
+                    <button class="btn add-button"><h6>B2</h6></button>
+                    <!-- more btn -->
                   </div>
                   <div class="grid grid-cols-2 gap-2 *:px-10 *:py-5">
-                    <button class="btn add-btn">A3</button>
-                    <button class="btn add-btn">A4</button>
-                    <button class="btn add-btn">B3</button>
-                    <button class="btn add-btn">B4</button>
-                    <button class="btn add-btn">C3</button>
-                    <button class="btn add-btn">C4</button>
-                    <button class="btn add-btn">D3</button>
-                    <button class="btn add-btn">D4</button>
-                    <button class="btn add-btn">E3</button>
-                    <button class="btn add-btn">E4</button>
-                    <button class="btn add-btn">F3</button>
-                    <button class="btn add-btn">F4</button>
-                    <button class="btn add-btn">G3</button>
-                    <button class="btn add-btn">G4</button>
-                    <button class="btn add-btn">H3</button>
-                    <button class="btn add-btn">H4</button>
-                    <button class="btn add-btn">I3</button>
-                    <button class="btn add-btn">I4</button>
+                    <button class="btn add-button"><h6>A3</h6></button>
+                    <button class="btn add-button"><h6>A4</h6></button>
+                    <button class="btn add-button"><h6>B3</h6></button>
+                    <button class="btn add-button"><h6>B4</h6></button>
+                    <!-- btn3 -->
                   </div>
                 </div>
               </div>
@@ -323,12 +292,17 @@
                   <p>Class</p>
                   <p>Price</p>
                 </div>
+                <!-- append -->
+                <ul
+                  id="selected-append-container"
+                  class="grid grid-cols-3 py-3 ml-8 mr-0 gap-x-20 gap-y-4"
+                ></ul>
                 <div
                   class="flex justify-between px-6 py-4 border-t border-dashed *:text-gray-500"
                 >
                   <h2>B1</h2>
-                  <p>Economy</p>
-                  <span>550</span>
+                  <h5>Economy</h5>
+                  <h4>550</h4>
                 </div>
                 <div
                   class="flex justify-between px-6 py-4 border-t border-dashed *:text-gray-500"
@@ -340,7 +314,7 @@
                 <hr />
                 <div class="raleway6 flex justify-between p-2">
                   <h2>Total Price</h2>
-                  <p>BDT <span>1100</span></p>
+                  <p>BDT <span class="total-cost">1100</span></p>
                 </div>
                 <!-- apply coupon -->
                 <div class="flex justify-center">
