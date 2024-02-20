@@ -1,5 +1,5 @@
 const allBtn = document.getElementsByClassName("add-button");
-let count = 8;
+let count = 36;
 let booking = 0;
 for (const button of allBtn) {
   button.addEventListener("click", function (e) {
@@ -8,7 +8,7 @@ for (const button of allBtn) {
 
     // console.log(
     //   e.target.parentNode.parentNode.parentNode.parentNode.parentNode
-    //     .childNodes[11].childNodes[7].childNodes[7].childNodes[5].innerText
+    //     .childNodes[3].childNodes[9].childNodes[3].childNodes
     // );
     /* appends*/
     const ulContainer = document.getElementById("selected-append-container");
@@ -27,42 +27,26 @@ for (const button of allBtn) {
     tk.innerText =
       e.target.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[11].childNodes[7].childNodes[7].childNodes[5].innerText;
     ulPrice.appendChild(tk);
+    /*btn bg color*/
+    e.target.style.backgroundColor = "rgb(19, 209, 60)";
+
     /*Calculation*/
-    // const totalCost = document.getElementById("total-cost");
-    // const convertedTotal = parseInt("totalCost");
-    // const total = convertedTotal + parseInt(tk);
-    // return totalCost;
+    const ticketPrice = document.getElementById("ticket-price").innerText;
+    const convertedTicketPrice = parseInt(ticketPrice);
+    const totalPrice = document.getElementById("total-price").innerText;
+    const convertedTotalPrice = parseInt(totalPrice);
+
+    const total = convertedTicketPrice + convertedTotalPrice;
+
+    console.log(total);
+
+    setInnerText("total", total);
 
     // document.getElementById("seat-count").innerText = count;
     setInnerText("seat-count", count);
     setInnerText("count-seat", booking);
   });
 }
-
-// let booking = 0;
-// for (const button of allBtn) {
-//   button.addEventListener("click", function (e) {
-//     booking = booking + 1;
-
-//     console.log(e.target.parentNode.childNodes);
-
-//     const seatNumber =
-//       e.target.parentNode.childNodes[3].childNodes[0].innerText;
-
-//     const selectedContainer = document.getElementById(
-//       "selected-append-container"
-//     );
-
-//     const li = document.createElement("li");
-
-//     const p = document.createElement("p");
-//     p.innerText = seatNumber;
-
-//     li.appendChild(p);
-
-//     selectedContainer.appendChild(li);
-//   });
-// }
 
 function setInnerText(id, value) {
   document.getElementById(id).innerText = value;

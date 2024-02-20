@@ -64,7 +64,7 @@
       <!-- banner section -->
       <section class="container mx-auto">
         <div
-          class="bg-[url('./images/banner.png')] rounded-2xl bg-no-repeat bg-cover bg-center text-center"
+          class="bg-[url('./images/banner.png')] rounded-2xl bg-no-repeat bg-cover bg-center text-center relative"
         >
           <h2 class="text-6xl raleway8 text-white pt-24">
             End-to-End Travel with
@@ -78,7 +78,8 @@
             <a href="#RM" class="raleway7 text-base">Buy Tickets</a>
           </button>
         </div>
-        <div class="flex gap-8 translate-x-48 -translate-y-11">
+        <!-- tranlate-x-y korle vertical line ashe?? -->
+        <div class="flex gap-8 absolute left-64 bottom-32">
           <div
             class="flex border-b-4 border-green-400 rounded-2xl px-4 bg-slate-50"
           >
@@ -114,7 +115,9 @@
       </section>
       <!-- offers section -->
       <section class="container mx-auto">
-        <h2 class="raleway7 text-4xl text-center my-8">Best offers for you</h2>
+        <h2 class="raleway7 text-4xl text-center mt-24 mb-11">
+          Best offers for you
+        </h2>
         <div class="flex gap-11">
           <div
             class="bg-[#FFBF0F] flex items-center pr-24 pl-20 rounded-2xl ml-24"
@@ -191,7 +194,7 @@
                     class="btn bg-green-200 inter text-green-400 rounded-xl"
                   >
                     <img src="images/seat-green.png" alt="" />
-                    <span id="seat-count">8</span> Seats left
+                    <span id="seat-count">36</span> Seats left
                   </button>
                 </div>
               </div>
@@ -219,7 +222,10 @@
           <div class="mt-40">
             <img src="images/fare.png" alt="" />
             <p>
-              <span class="raleway8 text-xl">550 Taka</span> <br />
+              <span class="raleway8 text-xl"
+                ><span id="ticket-price">550</span> Taka</span
+              >
+              <br />
               <span class="text-gray-500">Per Seat</span>
             </p>
           </div>
@@ -253,20 +259,53 @@
                 <div class="flex gap-32">
                   <div class="grid grid-cols-3 gap-3 *:px-10 *:py-5">
                     <p>A</p>
-                    <button class="btn add-button">
-                      <h6>A1</h6>
-                    </button>
+                    <button class="btn add-button"><h6>A1</h6></button>
                     <button class="btn add-button"><h6>A2</h6></button>
                     <p>B</p>
                     <button class="btn add-button"><h6>B1</h6></button>
                     <button class="btn add-button"><h6>B2</h6></button>
                     <!-- more btn -->
+                    <p>C</p>
+                    <button class="btn add-button"><h6>C1</h6></button>
+                    <button class="btn add-button"><h6>C2</h6></button>
+                    <p>D</p>
+                    <button class="btn add-button"><h6>D1</h6></button>
+                    <button class="btn add-button"><h6>D2</h6></button>
+                    <p>E</p>
+                    <button class="btn add-button"><h6>E1</h6></button>
+                    <button class="btn add-button"><h6>E2</h6></button>
+                    <p>F</p>
+                    <button class="btn add-button"><h6>F1</h6></button>
+                    <button class="btn add-button"><h6>F2</h6></button>
+                    <p>G</p>
+                    <button class="btn add-button"><h6>G1</h6></button>
+                    <button class="btn add-button"><h6>G2</h6></button>
+                    <p>H</p>
+                    <button class="btn add-button"><h6>H1</h6></button>
+                    <button class="btn add-button"><h6>H2</h6></button>
+                    <p>I</p>
+                    <button class="btn add-button"><h6>I1</h6></button>
+                    <button class="btn add-button"><h6>I2</h6></button>
                   </div>
                   <div class="grid grid-cols-2 gap-2 *:px-10 *:py-5">
                     <button class="btn add-button"><h6>A3</h6></button>
                     <button class="btn add-button"><h6>A4</h6></button>
                     <button class="btn add-button"><h6>B3</h6></button>
                     <button class="btn add-button"><h6>B4</h6></button>
+                    <button class="btn add-button"><h6>C3</h6></button>
+                    <button class="btn add-button"><h6>C4</h6></button>
+                    <button class="btn add-button"><h6>D3</h6></button>
+                    <button class="btn add-button"><h6>D4</h6></button>
+                    <button class="btn add-button"><h6>E3</h6></button>
+                    <button class="btn add-button"><h6>E4</h6></button>
+                    <button class="btn add-button"><h6>F3</h6></button>
+                    <button class="btn add-button"><h6>F4</h6></button>
+                    <button class="btn add-button"><h6>G3</h6></button>
+                    <button class="btn add-button"><h6>G4</h6></button>
+                    <button class="btn add-button"><h6>H3</h6></button>
+                    <button class="btn add-button"><h6>H4</h6></button>
+                    <button class="btn add-button"><h6>I3</h6></button>
+                    <button class="btn add-button"><h6>I4</h6></button>
                     <!-- btn3 -->
                   </div>
                 </div>
@@ -314,7 +353,11 @@
                 <hr />
                 <div class="raleway6 flex justify-between p-2">
                   <h2>Total Price</h2>
-                  <p>BDT <span class="total-cost">1100</span></p>
+                  <li class="hidden" id="total-price">0</li>
+                  <p>
+                    BDT
+                    <span id="total">1100</span>
+                  </p>
                 </div>
                 <!-- apply coupon -->
                 <div class="flex justify-center">
@@ -329,7 +372,7 @@
                 <div>
                   <div class="raleway6 flex justify-between p-2">
                     <h2>Grand Total</h2>
-                    <p>BDT <span>1100</span></p>
+                    <p>BDT <span id="grand-total">1100</span></p>
                   </div>
                 </div>
               </div>
@@ -392,7 +435,7 @@
                 </div>
               </dialog>
 
-              <div class="flex gap-8 mt-2 ml-6 *:border-b">
+              <div class="flex gap-8 *:mb-8 ml-6 *:border-b">
                 <a href="" class="text-gray-500">Terms and Conditions</a>
                 <a href="#" class="text-gray-500">Cancellation Policy</a>
               </div>
