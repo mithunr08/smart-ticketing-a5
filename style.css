@@ -6,6 +6,12 @@
   font-weight: 400;
   font-style: normal;
 }
+.inter4 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
 
 .raleway4 {
   font-family: "Raleway", sans-serif;

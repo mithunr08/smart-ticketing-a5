@@ -33,6 +33,8 @@ for (const button of allBtn) {
     ulPrice.appendChild(tk);
     /*btn bg color*/
     e.target.style.backgroundColor = "rgb(19, 209, 60)";
+    // disable btn
+    e.target.setAttribute("disabled", false);
     // >4 btn
 
     /*Calculation*/
