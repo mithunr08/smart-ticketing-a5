@@ -1,6 +1,8 @@
 const allBtn = document.getElementsByClassName("add-button");
 let count = 36;
 let booking = 0;
+let totalPrice = 0;
+let grandPrice = 0;
 for (const button of allBtn) {
   button.addEventListener("click", function (e) {
     count = count - 1;
@@ -29,18 +31,32 @@ for (const button of allBtn) {
     ulPrice.appendChild(tk);
     /*btn bg color*/
     e.target.style.backgroundColor = "rgb(19, 209, 60)";
+    // >4 btn
 
     /*Calculation*/
     const ticketPrice = document.getElementById("ticket-price").innerText;
     const convertedTicketPrice = parseInt(ticketPrice);
-    const totalPrice = document.getElementById("total-price").innerText;
-    const convertedTotalPrice = parseInt(totalPrice);
+    totalPrice = totalPrice + convertedTicketPrice;
+    const sum = totalPrice;
+    setInnerText("total", sum);
+    // grand-total
+    // const grandTotal = document.getElementById("grand-total").innerText;
+    // const convertedGrand = parseInt(grandTotal);
 
-    const total = convertedTicketPrice + convertedTotalPrice;
+    grandPrice = grandPrice + convertedTicketPrice;
+    const sum2 = grandPrice;
+    setInnerText("grand-total", sum2);
 
-    console.log(total);
+    // const ticketPrice = document.getElementById("ticket-price").innerText;
+    // const convertedTicketPrice = parseInt(ticketPrice);
+    // const totalPrice = document.getElementById("total-price").innerText;
+    // const convertedTotalPrice = parseInt(totalPrice);
 
-    setInnerText("total", total);
+    // const total = convertedTicketPrice + convertedTotalPrice;
+
+    // console.log(total);
+
+    // setInnerText("total", total);
 
     // document.getElementById("seat-count").innerText = count;
     setInnerText("seat-count", count);
