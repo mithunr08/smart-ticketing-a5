@@ -13,6 +13,8 @@ for (const button of allBtn) {
     //     .childNodes[3].childNodes[9].childNodes[3].childNodes
     // );
     /* appends*/
+    // array nite hobe
+
     const ulContainer = document.getElementById("selected-append-container");
     const li = document.createElement("li");
     li.innerText = e.target.innerText;
@@ -40,6 +42,7 @@ for (const button of allBtn) {
     const sum = totalPrice;
     setInnerText("total", sum);
     // grand-total
+
     // const grandTotal = document.getElementById("grand-total").innerText;
     // const convertedGrand = parseInt(grandTotal);
 
