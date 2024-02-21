@@ -48,9 +48,6 @@ for (const button of allBtn) {
 
     // grand-total
 
-    // const grandTotal = document.getElementById("grand-total").innerText;
-    // const convertedGrand = parseInt(grandTotal);
-
     grandPrice = grandPrice + convertedTicketPrice;
     const sum2 = grandPrice;
     setInnerText("grand-total", sum2);
@@ -68,8 +65,14 @@ function updateGrandTotal(status) {
     const couponCode = document.getElementById("coupon-code").value;
     if (couponCode == "NEW15") {
       document.getElementById("grand-total").innerText = sumT * 0.85;
+      /*hide coupon*/
+      document.getElementById("coupon-btn").remove("coupon-btn");
+      document.getElementById("coupon-code").remove("coupon-code");
     } else if (couponCode == "Couple 20") {
       document.getElementById("grand-total").innerText = sumT * 0.8;
+      /*hide coupon*/
+      document.getElementById("coupon-btn").remove("coupon-btn");
+      document.getElementById("coupon-code").remove("coupon-code");
     } else {
       alert("enter valid coupon code");
     }
