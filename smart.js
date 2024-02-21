@@ -12,6 +12,7 @@ for (const button of allBtn) {
     //   e.target.parentNode.parentNode.parentNode.parentNode.parentNode
     //     .childNodes[3].childNodes[9].childNodes[3].childNodes
     // );
+
     /* appends*/
     // array nite hobe
 
@@ -35,6 +36,7 @@ for (const button of allBtn) {
     e.target.style.backgroundColor = "rgb(19, 209, 60)";
     // disable btn
     e.target.setAttribute("disabled", false);
+
     // >4 btn
 
     /*Calculation*/
@@ -43,6 +45,7 @@ for (const button of allBtn) {
     totalPrice = totalPrice + convertedTicketPrice;
     const sum = totalPrice;
     setInnerText("total", sum);
+
     // grand-total
 
     // const grandTotal = document.getElementById("grand-total").innerText;
@@ -52,21 +55,25 @@ for (const button of allBtn) {
     const sum2 = grandPrice;
     setInnerText("grand-total", sum2);
 
-    // const ticketPrice = document.getElementById("ticket-price").innerText;
-    // const convertedTicketPrice = parseInt(ticketPrice);
-    // const totalPrice = document.getElementById("total-price").innerText;
-    // const convertedTotalPrice = parseInt(totalPrice);
-
-    // const total = convertedTicketPrice + convertedTotalPrice;
-
-    // console.log(total);
-
-    // setInnerText("total", total);
-
     // document.getElementById("seat-count").innerText = count;
     setInnerText("seat-count", count);
     setInnerText("count-seat", booking);
   });
+}
+
+function updateGrandTotal(status) {
+  const sumT = totalPrice;
+
+  if (updateGrandTotal) {
+    const couponCode = document.getElementById("coupon-code").value;
+    if (couponCode == "NEW15") {
+      document.getElementById("grand-total").innerText = sumT * 0.85;
+    } else if (couponCode == "Couple 20") {
+      document.getElementById("grand-total").innerText = sumT * 0.8;
+    } else {
+      alert("enter valid coupon code");
+    }
+  }
 }
 
 function setInnerText(id, value) {

@@ -362,11 +362,18 @@
                 <!-- apply coupon -->
                 <div class="flex justify-center">
                   <input
+                    id="coupon-code"
                     class="w-full rounded-lg pl-4"
                     type="text"
                     placeholder="Have any coupon?"
                   />
-                  <button class="btn text-white bg-green-400">Apply</button>
+                  <button
+                    onclick="updateGrandTotal('coupon-apply')"
+                    id="coupon-btn"
+                    class="btn text-white bg-green-400"
+                  >
+                    Apply
+                  </button>
                 </div>
                 <!-- grand total -->
                 <div>
