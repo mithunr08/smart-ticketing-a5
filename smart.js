@@ -13,9 +13,13 @@ for (const button of allBtn) {
     //     .childNodes[3].childNodes[9].childNodes[3].childNodes
     // );
 
-    /* appends*/
-    // array nite hobe
+    /*seat limit*/
+    if (booking > 4) {
+      alert("End of Seat booking Limit ");
+      return;
+    }
 
+    /* appends*/
     const ulContainer = document.getElementById("selected-append-container");
     const li = document.createElement("li");
     li.innerText = e.target.innerText;
@@ -74,7 +78,7 @@ function updateGrandTotal(status) {
       document.getElementById("coupon-btn").remove("coupon-btn");
       document.getElementById("coupon-code").remove("coupon-code");
     } else {
-      alert("enter valid coupon code");
+      alert("Enter valid coupon code");
     }
   }
 }
